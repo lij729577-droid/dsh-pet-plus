@@ -1,0 +1,46 @@
+{
+  "name": "dsh-pet-plus",
+  "version": "0.2.0",
+  "description": "蓝毛小女仆伴生插件：四个可收起的悬浮图标（喂食/番茄钟/喝水/状态）、番茄钟倒计时、喝水提醒",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./standalone": "./standalone.js"
+  },
+  "bin": {
+    "dsh-pet-plus": "standalone.js"
+  },
+  "files": [
+    "index.js",
+    "standalone.js",
+    "panel.py",
+    "panel-preview.png",
+    "screenshots",
+    "docs",
+    "cordis.patch.yml",
+    "README.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "install.ps1",
+    "uninstall.ps1",
+    "启动小女仆控制台.bat"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-pet",
+    "desktop-pet",
+    "pomodoro"
+  ],
+  "scripts": {
+    "check": "node --check index.js"
+  },
+  "os": [
+    "win32"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT"
+}
