@@ -1,0 +1,24 @@
+name: check
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  syntax:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Check host plugin syntax
+        run: node --check index.js
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check panel syntax
+        run: python -m py_compile panel.py
